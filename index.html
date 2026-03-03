@@ -7,22 +7,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #f7f4ef;
-    --surface: #efecea;
-    --surface2: #e8e4e0;
-    --border: #d0cbc4;
-    --text: #1e1a16;
-    --muted: #7a7068;
-    --accent: #b8882a;
-    --accent-dim: rgba(184, 136, 42, 0.10);
-    --go: #2d7a55;
-    --go-dim: rgba(45, 122, 85, 0.10);
-    --pause: #a07820;
-    --pause-dim: rgba(160, 120, 32, 0.10);
-    --nogo: #b03a28;
-    --nogo-dim: rgba(176, 58, 40, 0.10);
-    --new: #4a5eaa;
-    --new-dim: rgba(74, 94, 170, 0.10);
+    --bg: #ffffff;
+    --surface: #f4f6f8;
+    --surface2: #eaecf0;
+    --border: #dde1e7;
+    --text: #0f1923;
+    --muted: #6b7685;
+    --accent: #2d5fa6;
+    --accent-dim: rgba(45, 95, 166, 0.10);
+    --go: #1e7a4a;
+    --go-dim: rgba(30, 122, 74, 0.10);
+    --pause: #a06020;
+    --pause-dim: rgba(160, 96, 32, 0.10);
+    --nogo: #b03030;
+    --nogo-dim: rgba(176, 48, 48, 0.10);
+    --new: #2d5fa6;
+    --new-dim: rgba(45, 95, 166, 0.10);
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -41,7 +41,7 @@
 
   /* ── HERO ── */
   .hero {
-    min-height: 100vh;
+    min-height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -57,7 +57,7 @@
     right: -200px;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(184,136,42,0.07) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(45,95,166,0.06) 0%, transparent 70%);
     pointer-events: none;
   }
 
@@ -103,7 +103,7 @@
     max-width: 560px;
     font-size: 16px;
     line-height: 1.85;
-    color: #5c5550;
+    color: #4a5568;
     margin-bottom: 64px;
     opacity: 0;
     animation: fadeUp 0.8s ease forwards 0.8s;
@@ -144,7 +144,7 @@
   }
 
   .btn-primary:hover {
-    background: #c49838;
+    background: #1e4d8c;
     transform: translateY(-1px);
   }
 
@@ -415,7 +415,7 @@
     margin-top: 1px;
   }
 
-  .q-text { color: #2e2a26; }
+  .q-text { color: #0f1923; }
 
   .q-badge {
     display: inline-block;
@@ -448,7 +448,7 @@
     display: flex;
     gap: 10px;
     font-size: 13px;
-    color: #5c5550;
+    color: #4a5568;
     line-height: 1.6;
     margin-bottom: 8px;
   }
@@ -486,7 +486,7 @@
     gap: 12px;
     margin-bottom: 8px;
     font-size: 12.5px;
-    color: #5c5550;
+    color: #4a5568;
   }
 
   .spectrum-bar {
@@ -569,9 +569,10 @@
     border: 1px solid var(--border);
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     gap: 40px;
     margin-bottom: 80px;
+    text-align: right;
   }
 
   .teaser-text {}
@@ -740,7 +741,7 @@
   }
 
   .lens-nav-btn:hover {
-    background: #c49838;
+    background: #1e4d8c;
   }
 
   .lens-nav-back {
@@ -819,7 +820,7 @@
 
   .fq-sub {
     font-size: 14px;
-    color: #5c5550;
+    color: #4a5568;
     line-height: 1.75;
     margin-bottom: 14px;
     display: none;
@@ -854,7 +855,7 @@
   }
 
   .fq-input::placeholder {
-    color: #3a3630;
+    color: #2d3748;
     font-style: italic;
   }
 
@@ -937,7 +938,7 @@
 
   .cq-text {
     font-size: 16px;
-    color: #4a4540;
+    color: #2d3748;
     line-height: 1.65;
     margin-bottom: 14px;
   }
@@ -990,9 +991,177 @@
   }
 
   .cq-feedback.show { display: block; }
-  .cq-feedback.feedback-pause { background: var(--pause-dim); border-left: 2px solid var(--pause); color: #c8c2ba; }
-  .cq-feedback.feedback-nogo { background: var(--nogo-dim); border-left: 2px solid var(--nogo); color: #c8c2ba; }
-  .cq-feedback.feedback-go { background: var(--go-dim); border-left: 2px solid var(--go); color: #c8c2ba; }
+  .cq-feedback.feedback-pause { background: var(--pause-dim); border-left: 2px solid var(--pause); color: #4a5568; }
+  .cq-feedback.feedback-nogo { background: var(--nogo-dim); border-left: 2px solid var(--nogo); color: #4a5568; }
+  .cq-feedback.feedback-go { background: var(--go-dim); border-left: 2px solid var(--go); color: #4a5568; }
+
+
+  /* ── CASE STUDY TEASER ── */
+  .cs-teaser {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+  }
+  .cs-teaser-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin: 0 60px;
+  }
+  .cs-teaser-left {
+    padding: 56px 48px 56px 0;
+    border-right: 1px solid var(--border);
+  }
+  .cs-teaser-right {
+    padding: 56px 0 56px 48px;
+  }
+  .cs-teaser-eyebrow {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+  .cs-teaser-company {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 4px;
+  }
+  .cs-teaser-role {
+    font-size: 13px;
+    color: var(--muted);
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+  .cs-teaser-hook {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--text);
+    margin-bottom: 24px;
+  }
+  .cs-teaser-pills {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .cs-teaser-pill {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    background: var(--bg);
+  }
+  .cs-teaser-pill-accent {
+    background: var(--accent-dim);
+    border-color: rgba(45,95,166,0.3);
+    color: var(--accent);
+  }
+  .cs-teaser-pill-press {
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: var(--surface2);
+  }
+  .cs-teaser-pill-press:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .cs-teaser-bullets {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .cs-teaser-bullet {
+    display: flex;
+    gap: 16px;
+    align-items: baseline;
+  }
+  .cs-teaser-verb {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    min-width: 80px;
+    flex-shrink: 0;
+  }
+  .cs-teaser-desc {
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  /* ── BRIDGE ── */
+  .cs-bridge {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 40px 60px;
+  }
+  .cs-bridge-line {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+  .cs-bridge-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  /* ── CASE STUDY MODAL ── */
+  .cs-overlay { display:none; position:fixed; inset:0; background:rgba(14,11,6,0.65); z-index:1000; overflow-y:auto; padding:48px 24px; backdrop-filter:blur(6px); }
+  .cs-overlay.open { display:block; }
+  .cs-modal { background:var(--bg); max-width:880px; margin:0 auto; border:1px solid var(--border); position:relative; }
+  .cs-close { position:absolute; top:20px; right:24px; background:none; border:none; font-size:22px; color:var(--muted); cursor:pointer; z-index:10; line-height:1; transition:color 0.2s; }
+  .cs-close:hover { color:var(--text); }
+  .cs-header { padding:48px 52px 40px; background:var(--surface); border-bottom:1px solid var(--border); }
+  .cs-eyebrow { font-size:11px; font-weight:500; letter-spacing:0.25em; text-transform:uppercase; color:var(--accent); margin-bottom:16px; }
+  .cs-company { font-family:'Cormorant Garamond',serif; font-size:42px; font-weight:300; line-height:1.1; margin-bottom:4px; }
+  .cs-role { font-size:13px; color:var(--muted); font-style:italic; margin-bottom:20px; }
+  .cs-context { font-size:14.5px; line-height:1.85; color:var(--text); max-width:660px; margin-bottom:24px; }
+  .cs-pills { display:flex; gap:10px; flex-wrap:wrap; }
+  .cs-pill { font-size:11px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; padding:5px 14px; border:1px solid var(--border); color:var(--muted); background:var(--surface2); }
+  .cs-pill-gold { background:var(--accent-dim); border-color:rgba(184,136,42,0.4); color:var(--accent); }
+  .cs-gate { border-bottom:1px solid var(--border); }
+  .cs-gate-head { padding:24px 52px; display:flex; align-items:center; gap:18px; cursor:pointer; user-select:none; background:var(--surface); transition:background 0.2s; }
+  .cs-gate-head:hover { background:var(--surface2); }
+  .cs-gate-num { font-family:'Cormorant Garamond',serif; font-size:44px; font-weight:300; color:var(--border); line-height:1; width:36px; flex-shrink:0; }
+  .cs-gate-label { font-size:10px; font-weight:500; letter-spacing:0.2em; text-transform:uppercase; color:var(--muted); margin-bottom:3px; }
+  .cs-gate-title { font-family:'Cormorant Garamond',serif; font-size:24px; font-weight:300; }
+  .cs-verdict-pill { margin-left:auto; font-size:11px; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; padding:5px 14px; display:flex; align-items:center; gap:6px; flex-shrink:0; }
+  .cs-verdict-pill .dot { width:6px; height:6px; border-radius:50%; background:currentColor; }
+  .pill-go { background:var(--go-dim); color:var(--go); border:1px solid rgba(45,122,85,0.25); }
+  .pill-pause { background:var(--pause-dim); color:var(--pause); border:1px solid rgba(160,120,32,0.25); }
+  .cs-gate-toggle { font-size:18px; color:var(--muted); transition:transform 0.3s; margin-left:12px; }
+  .cs-gate.open .cs-gate-toggle { transform:rotate(45deg); color:var(--accent); }
+  .cs-gate-body { max-height:0; overflow:hidden; transition:max-height 0.5s cubic-bezier(0.4,0,0.2,1); }
+  .cs-gate.open .cs-gate-body { max-height:6000px; }
+  .cs-gate-content { padding:32px 52px 40px; border-top:1px solid var(--border); }
+  .cs-qa { padding:18px 0; border-bottom:1px solid rgba(208,203,196,0.4); }
+  .cs-qa:last-child { border-bottom:none; }
+  .cs-q { font-size:11px; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; color:var(--muted); margin-bottom:8px; }
+  .cs-a { font-size:15px; line-height:1.75; color:var(--text); }
+  .cs-a-tag { display:inline-flex; align-items:center; gap:6px; font-size:11px; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; padding:3px 10px; margin-right:8px; vertical-align:middle; }
+  .cs-lens-tabs { display:flex; gap:2px; margin-bottom:28px; flex-wrap:wrap; }
+  .cs-lens-tab { padding:8px 18px; font-size:11px; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; background:var(--surface2); color:var(--muted); border:1px solid var(--border); cursor:pointer; transition:all 0.2s; }
+  .cs-lens-tab:hover { color:var(--text); }
+  .cs-lens-tab.active { background:var(--accent-dim); color:var(--accent); border-color:rgba(184,136,42,0.4); }
+  .cs-lens-panel { display:none; }
+  .cs-lens-panel.active { display:block; }
+  .cs-lens-title { font-family:'Cormorant Garamond',serif; font-size:26px; font-weight:300; margin-bottom:4px; }
+  .cs-lens-sub { font-size:13px; color:var(--muted); font-style:italic; margin-bottom:24px; padding-bottom:20px; border-bottom:1px solid var(--border); }
 
   /* ── ANIMATIONS ── */
   @keyframes fadeUp {
@@ -1021,25 +1190,51 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-eyebrow">A Field-Tested Framework · Vidhya Sriram</div>
-  <h1 class="hero-title">The Commercialization<br><em>Playbook</em></h1>
+  <div class="hero-eyebrow">Vidhya Sriram · The Commercialization Method</div>
+  <h1 class="hero-title">The Commercialization<br><em>Method</em></h1>
   <p class="hero-subtitle">Can you. Should you. How to.</p>
-  <p class="hero-intro">
-    Most companies sense they have something worth bringing to market. <strong>Few know how to tell.</strong> This playbook was built from real engagements — not from a distance, but inside the work. Scoping MVPs, validating with customers, making the go and no-go calls, and standing behind them. Two examples in this playbook came from enterprise clients. One went to market. One was advised not to — and was better for it. The discipline has been stress-tested against the Gen AI era. The questions got harder. The rigor got more important.
-  </p>
-  <div class="hero-actions">
-    <a href="#framework" class="btn btn-primary">
-      Explore the Framework <span class="btn-arrow">→</span>
-    </a>
-    <a href="#examples" class="btn btn-secondary">
-      See It in Action <span class="btn-arrow">→</span>
-    </a>
-  </div>
   <div class="hero-scroll">
     <div class="scroll-line"></div>
     Scroll to explore
   </div>
 </section>
+
+<!-- CASE STUDY TEASER -->
+<div class="cs-teaser" id="proof">
+  <div class="cs-teaser-inner">
+    <div class="cs-teaser-left">
+      <div class="cs-teaser-eyebrow">The Method in Action · 2021</div>
+      <div class="cs-teaser-company">Fortune 500 Entertainment Co.</div>
+      <div class="cs-teaser-role">Director, Product Innovation</div>
+      <p class="cs-teaser-hook">An entertainment company became a technology company. In 3 months.</p>
+      <div class="cs-teaser-pills">
+        <div class="cs-teaser-pill cs-teaser-pill-accent">$225M VC Investment</div>
+        <div class="cs-teaser-pill cs-teaser-pill-accent">SPAC Listing</div>
+        <div class="cs-teaser-pill">8-Week MVP</div>
+        <div class="cs-teaser-pill">Early Adopter Validated</div>
+        <a href="https://www.fool.com" target="_blank" class="cs-teaser-pill cs-teaser-pill-press">📰 As reported in The Motley Fool ↗</a>
+      </div>
+    </div>
+    <div class="cs-teaser-right">
+      <div class="cs-teaser-bullets">
+        <div class="cs-teaser-bullet"><span class="cs-teaser-verb">Identified</span><span class="cs-teaser-desc">What was worth building — a hidden capability people genuinely needed</span></div>
+        <div class="cs-teaser-bullet"><span class="cs-teaser-verb">Validated</span><span class="cs-teaser-desc">That commercializing it wouldn't cannibalize the core business</span></div>
+        <div class="cs-teaser-bullet"><span class="cs-teaser-verb">Shipped</span><span class="cs-teaser-desc">MVP in 8 weeks anchored on one paradigm shift: from reacting to last quarter to predicting the next one</span></div>
+        <div class="cs-teaser-bullet"><span class="cs-teaser-verb">Outcome</span><span class="cs-teaser-desc">$225M VC investment. SPAC listing. Entertainment multiple → technology multiple.</span></div>
+      </div>
+      <button class="btn btn-primary" onclick="openCS()" style="margin-top:28px;">
+        Open case study <span class="btn-arrow">→</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- BRIDGE -->
+<div class="cs-bridge">
+  <div class="cs-bridge-line"></div>
+  <div class="cs-bridge-text">This is the method that made it happen</div>
+  <div class="cs-bridge-line"></div>
+</div>
 
 <!-- STATS BAR -->
 <div class="stats-bar">
@@ -1061,7 +1256,7 @@
   <div class="section-header">
     <div class="section-number">01</div>
     <div class="section-title-group">
-      <div class="section-eyebrow">The Framework</div>
+      <div class="section-eyebrow">The Method</div>
       <h2 class="section-title">Three gates. One rigorous decision.</h2>
     </div>
   </div>
@@ -1171,14 +1366,6 @@
               <div class="cq-feedback" id="sq3-feedback"></div>
             </div>
 
-            <div class="cq-question" id="sq4">
-              <div class="cq-text">Does the natural cadence of this use case support a viable business model?</div>
-              <div class="cq-toggles">
-                <button class="cq-btn" onclick="answerSQ('sq4','yes')">Yes</button>
-                <button class="cq-btn" onclick="answerSQ('sq4','no')">No</button>
-              </div>
-              <div class="cq-feedback" id="sq4-feedback"></div>
-            </div>
           </div>
 
           <div class="gate-verdict" id="sq-verdict" style="display:none"></div>
@@ -1529,16 +1716,14 @@
   </div>
 </section>
 
-<!-- TEASER: NEXT SECTION -->
-<div class="teaser" id="examples">
-  <div class="teaser-text">
-    <div class="teaser-eyebrow">Coming Next · Section 02</div>
-    <div class="teaser-title">See the framework applied.<br>Two real outcomes.</div>
-    <div class="teaser-desc">One go. One no-go. Both the right call.</div>
+<div class="teaser">
+  <div style="text-align:right; margin-left:auto;">
+    <div class="teaser-title">See it in action.</div>
+    <div class="teaser-desc" style="margin-bottom:20px;">A real engagement. A real outcome. The method applied.</div>
+    <button class="btn btn-primary" style="white-space:nowrap" onclick="openCS()">
+      Open case study <span class="btn-arrow">→</span>
+    </button>
   </div>
-  <a href="#" class="btn btn-primary" style="white-space:nowrap">
-    Watch the Examples <span class="btn-arrow">→</span>
-  </a>
 </div>
 
 <script>
@@ -1605,10 +1790,6 @@
     sq3: {
       yes: { type: 'pause', text: 'If this capability is what keeps your operations lean, productizing it means taking on external support obligations — SLAs, bug fixes, customer demands. That\'s a real cost. Make sure the revenue opportunity justifies the operational burden you\'re adding.' },
       no:  { type: 'go', text: 'This capability isn\'t deeply tied to your cost structure, which removes one of the key risks of productization.' }
-    },
-    sq4: {
-      yes: { type: 'go', text: 'The use case cadence supports a sustainable model. Whether that\'s subscription, transaction, or outcome-based — there\'s a natural rhythm to build around.' },
-      no:  { type: 'pause', text: 'This is worth pausing on. If the use case happens rarely — once a year, once a decade — a subscription model won\'t hold. Before proceeding, get specific about what pricing model fits the natural cadence. A project or outcome-based model might work. But if no model fits, that\'s a meaningful gap.' }
     }
   };
 
@@ -1632,7 +1813,7 @@
     feedbackEl.textContent = fb.text;
     feedbackEl.className = `cq-feedback show feedback-${fb.type}`;
 
-    if (Object.keys(sqAnswers).length === 4) {
+    if (Object.keys(sqAnswers).length === 3) {
       updateSQVerdict();
     }
   }
@@ -1645,7 +1826,6 @@
     if (sqAnswers['sq1'] === 'yes') pauseReasons.push('it\'s central to your customer value proposition');
     if (sqAnswers['sq2'] === 'yes') pauseReasons.push('it drives your existing customer growth');
     if (sqAnswers['sq3'] === 'yes') pauseReasons.push('it underpins your operational cost advantage');
-    if (sqAnswers['sq4'] === 'no') pauseReasons.push('the use case cadence doesn\'t clearly support a viable business model');
 
     let html = '';
 
@@ -1742,7 +1922,248 @@
 
     verdictEl.innerHTML = html;
   }
+
+  function openCS() {
+    document.getElementById('csModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeCS() {
+    document.getElementById('csModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function toggleCS(id) {
+    document.getElementById(id).classList.toggle('open');
+  }
+  function showCSLens(n) {
+    document.querySelectorAll('.cs-lens-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.cs-lens-tab').forEach(t => t.classList.remove('active'));
+    document.getElementById('csl' + n).classList.add('active');
+    document.querySelectorAll('.cs-lens-tab')[n-1].classList.add('active');
+  }
+  // Close modal on overlay click
+  document.addEventListener('DOMContentLoaded', function() {
+    var modal = document.getElementById('csModal');
+    if (modal) modal.addEventListener('click', function(e) {
+      if (e.target === this) closeCS();
+    });
+  });
+
 </script>
+
+
+<!-- BOWLERO CASE STUDY MODAL -->
+<div class="cs-overlay" id="csModal">
+  <div class="cs-modal">
+    <button class="cs-close" onclick="closeCS()">×</button>
+
+    <!-- HEADER: Resume context -->
+    <div class="cs-header">
+      <div class="cs-eyebrow">The Commercialization Method · Case Study</div>
+      <div class="cs-company">Fortune 500 Entertainment Co.</div>
+      <p class="cs-context" style="margin-top:16px;"><em>An entertainment company became a technology company. In 3 months. Here's exactly how.</em></p>
+      <p style="font-size:13px; color:var(--muted); font-style:italic; margin-top:8px;">Director of Product Innovation · Launch Consulting</p>
+      <div style="margin-top:24px; display:flex; flex-direction:column; gap:16px; padding-bottom:28px; border-bottom:1px solid var(--border);">
+        <div style="display:flex; gap:16px; align-items:baseline;"><span style="color:var(--accent); font-weight:500; font-size:12px; min-width:90px; text-transform:uppercase; letter-spacing:0.1em;">Identified</span><span style="font-size:14.5px; color:var(--text); line-height:1.6;">What was worth building — a hidden capability people genuinely needed</span></div>
+        <div style="display:flex; gap:16px; align-items:baseline;"><span style="color:var(--accent); font-weight:500; font-size:12px; min-width:90px; text-transform:uppercase; letter-spacing:0.1em;">Validated</span><span style="font-size:14.5px; color:var(--text); line-height:1.6;">That commercializing it wouldn't cannibalize the core business — and the upside justified the risk</span></div>
+        <div style="display:flex; gap:16px; align-items:baseline;"><span style="color:var(--accent); font-weight:500; font-size:12px; min-width:90px; text-transform:uppercase; letter-spacing:0.1em;">Shipped</span><span style="font-size:14.5px; color:var(--text); line-height:1.6;">An MVP in 8 weeks anchored on one paradigm shift: from reacting to last quarter to predicting the next one. Early adopter buy-in by week 12</span></div>
+        <div style="display:flex; gap:16px; align-items:baseline;"><span style="color:var(--accent); font-weight:500; font-size:12px; min-width:90px; text-transform:uppercase; letter-spacing:0.1em;">Outcome</span><span style="font-size:14.5px; color:var(--text); line-height:1.6;">$225M VC investment. SPAC listing. Entertainment multiple → technology multiple.</span></div>
+      </div>
+      <div style="display:flex; gap:10px; flex-wrap:wrap; padding-top:24px;">
+        <div class="cs-pill cs-pill-gold">$225M SPAC</div>
+        <div class="cs-pill cs-pill-gold">$2.6B Valuation</div>
+        <div class="cs-pill">8-Week MVP</div>
+        <div class="cs-pill">Early Adopter Validated</div>
+      </div>
+
+    </div>
+
+    <!-- GATE 1: CAN YOU? -->
+    <div class="cs-gate open" id="csg1">
+      <div class="cs-gate-head" onclick="toggleCS('csg1')">
+        <div class="cs-gate-num">1</div>
+        <div>
+          <div class="cs-gate-label">Part One</div>
+          <div class="cs-gate-title">Can You Productize?</div>
+        </div>
+        <div class="cs-verdict-pill pill-go"><span class="dot"></span> Go</div>
+        <div class="cs-gate-toggle">+</div>
+      </div>
+      <div class="cs-gate-body">
+        <div class="cs-gate-content">
+          <div class="cs-qa">
+            <div class="cs-q">Does this deliver a meaningfully better outcome than what exists?</div>
+            <div class="cs-a"><span class="cs-a-tag pill-go"><span class="dot"></span>Yes</span>Existing tools showed last quarter's numbers. This predicted the next 6–12 months using external location signals — Amazon warehouse openings, metro expansions, employer shutdowns — that no operational reporting tool was incorporating. Fundamentally different category of value.</div>
+          </div>
+          <div class="cs-qa">
+            <div class="cs-q">Can you quantify the value delivered?</div>
+            <div class="cs-a"><span class="cs-a-tag pill-go"><span class="dot"></span>Yes</span>Location-dependent businesses with sub-5% margins live and die on anticipating foot traffic shifts. A single bad location decision — opening where a major employer is quietly planning to leave — can cost millions. The value is in avoiding those decisions and capturing the ones competitors miss.</div>
+          </div>
+          <div class="cs-qa">
+            <div class="cs-q">Are there people who would pay for this right now?</div>
+            <div class="cs-a"><span class="cs-a-tag pill-pause"><span class="dot"></span>Not Sure</span>Early adopter signals were validated with golf franchise and amusement park operators — same business DNA, genuine interest. But willingness to pay at scale was still unproven at the time of the SPAC. The $225M investment validated the market thesis; formal paying customers were the next milestone.</div>
+          </div>
+          <div class="cs-qa">
+            <div class="cs-q">Could Gen AI replicate this within 12 months?</div>
+            <div class="cs-a"><span class="cs-a-tag pill-go"><span class="dot"></span>No</span>The defensibility isn't the algorithm — it's 321 locations of proprietary operational data built over years, and the process discipline used to identify what signals actually predict profitability. That combination takes time and domain depth to replicate.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GATE 2: SHOULD YOU? -->
+    <div class="cs-gate" id="csg2">
+      <div class="cs-gate-head" onclick="toggleCS('csg2')">
+        <div class="cs-gate-num">2</div>
+        <div>
+          <div class="cs-gate-label">Part Two</div>
+          <div class="cs-gate-title">Should You Productize?</div>
+        </div>
+        <div class="cs-verdict-pill pill-go"><span class="dot"></span> Go</div>
+        <div class="cs-gate-toggle">+</div>
+      </div>
+      <div class="cs-gate-body">
+        <div class="cs-gate-content">
+          <div class="cs-qa">
+            <div class="cs-q">Is this central to why customers choose you over competitors?</div>
+            <div class="cs-a"><span class="cs-a-tag pill-go"><span class="dot"></span>No</span>Bowlero's customers choose them for bowling, not for operational intelligence software. The internal tool was invisible to end customers — which meant sharing it externally carried no risk of diluting the core competitive offer.</div>
+          </div>
+          <div class="cs-qa">
+            <div class="cs-q">Is this critical to growing your existing customer base?</div>
+            <div class="cs-a"><span class="cs-a-tag pill-go"><span class="dot"></span>No</span>The tool helped Bowlero manage its own locations efficiently. It played no role in acquiring or retaining bowling customers. Externalizing it would not cannibalise the consumer growth engine.</div>
+          </div>
+          <div class="cs-qa">
+            <div class="cs-q">Does this significantly reduce your own operational costs?</div>
+            <div class="cs-a"><span class="cs-a-tag pill-pause"><span class="dot"></span>Yes — watch this</span>This is the key tension. The internal tool was directly responsible for maintaining healthy EBITDA across 321 locations in a notoriously low-margin, labor-intensive business. Productizing it meant taking on external SLA obligations while the capability was still load-bearing internally. The mitigation: keep the internal and external versions on separate roadmaps with explicit resourcing.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GATE 3: HOW TO -->
+    <div class="cs-gate" id="csg3">
+      <div class="cs-gate-head" onclick="toggleCS('csg3')">
+        <div class="cs-gate-num">3</div>
+        <div>
+          <div class="cs-gate-label">Part Three</div>
+          <div class="cs-gate-title">How to Go to Market</div>
+        </div>
+        <div class="cs-gate-toggle">+</div>
+      </div>
+      <div class="cs-gate-body">
+        <div class="cs-gate-content">
+          <div class="cs-lens-tabs">
+            <div class="cs-lens-tab active" onclick="showCSLens(1)">01 · Desirability</div>
+            <div class="cs-lens-tab" onclick="showCSLens(2)">02 · Feasibility</div>
+            <div class="cs-lens-tab" onclick="showCSLens(3)">03 · Viability</div>
+            <div class="cs-lens-tab" onclick="showCSLens(4)">04 · Defensibility</div>
+          </div>
+
+          <!-- DESIRABILITY -->
+          <div class="cs-lens-panel active" id="csl1">
+            <div class="cs-lens-title">Desirability</div>
+            <div class="cs-lens-sub">Do the right people want this — urgently enough to act?</div>
+            <div class="cs-qa">
+              <div class="cs-q">Who is the specific customer?</div>
+              <div class="cs-a">Multi-location business owners running on sub-5% margins — bowling, golf, car washes, amusement parks, fast-casual. Location-dependent, highly labor-intensive, discretionary spending exposure. They feel this most acutely when a location underperforms and they have no data to explain why or predict when it will turn.</div>
+            </div>
+            <div class="cs-qa">
+              <div class="cs-q">Does it integrate into existing workflow or require behavior change?</div>
+              <div class="cs-a">Surfaces inside the existing ops workflow. Managers were already checking location performance data — the product replaced what they were doing, not added a new step. No new habit required. That was a deliberate design decision from the journey mapping phase.</div>
+            </div>
+            <div class="cs-qa">
+              <div class="cs-q">Are they actively trying to solve this?</div>
+              <div class="cs-a">Aware of the problem but had accepted it as the cost of the business. They knew they were flying blind — they just didn't believe a solution existed. That's a critical insight: the market wasn't searching for this product. It had to be shown to them. Which is why the early adopter demo strategy mattered more than inbound demand signals.</div>
+            </div>
+            <div class="cs-qa">
+              <div class="cs-q">What's pushing them away from current solutions?</div>
+              <div class="cs-a">Nothing is pushing them away — there's no incumbent to displace. The driver is ambition, not frustration. They want to modernize. They want to be seen as tech-forward operators. That identity pull is stronger than any pain point, and it's what made the SPAC story land.</div>
+            </div>
+            <div class="cs-qa">
+              <div class="cs-q">What's pulling them toward this?</div>
+              <div class="cs-a">Two things: positioning themselves as a technology-forward company — which changes how investors and acquirers value the business — and a new revenue channel with a realistic payback inside 12 months. The pull wasn't better ops data. It was a valuation re-rating and a new P&L line.</div>
+            </div>
+          </div>
+
+          <!-- FEASIBILITY -->
+          <div class="cs-lens-panel" id="csl2">
+            <div class="cs-lens-title">Feasibility</div>
+            <div class="cs-lens-sub">Can you actually build and deliver this — at the quality the market expects?</div>
+            <div class="cs-qa">
+              <div class="cs-q">What do you have and what are the gaps?</div>
+              <div class="cs-a">Have: 321 locations of proprietary operational data accumulated over years — no competitor could replicate this dataset quickly. Have: engineering capability to build the ML layer. Gap: enterprise sales motion — the team knew how to run bowling centers, not how to sell SaaS. Gap: customer success function for external clients with SLA expectations.</div>
+            </div>
+            <div class="cs-qa">
+              <div class="cs-q">What do you build, buy, or partner?</div>
+              <div class="cs-a">Build the core intelligence layer — that's the proprietary IP. White-label distribution to adjacent verticals (golf, amusement) rather than building separate sales channels for each. Keep control of the product; use partners to reach markets faster than direct sales would allow.</div>
+            </div>
+            <div class="cs-qa">
+              <div class="cs-q">Where does the real innovation live?</div>
+              <div class="cs-a">Both: a new product category (predictive location intelligence where only reactive reporting existed) and a new business model (SaaS subscription into a market that had never bought software this way). Either alone would have been significant. Together they're what justified technology company valuation multiples.</div>
+            </div>
+            <div class="cs-qa">
+              <div class="cs-q">What's in the MVP and what's out?</div>
+              <div class="cs-a">Dogfooded inside Bowlero across 321 locations first — which both validated the signals and produced the dataset needed for external credibility. Then one early adopter customer outside bowling before the SPAC. Scope discipline: core predictive intelligence and peer benchmarking in. Custom reporting, mobile, multi-vertical configurability all deferred to V2.</div>
+            </div>
+            <div class="cs-qa">
+              <div class="cs-q">How do you ensure consistent outcomes?</div>
+              <div class="cs-a">Internal dogfooding was the quality gate. Every signal and prediction was tested against known Bowlero location outcomes before any external customer saw the product. The 321-location dataset meant the model had real calibration before it needed to perform for a paying customer.</div>
+            </div>
+          </div>
+
+          <!-- VIABILITY -->
+          <div class="cs-lens-panel" id="csl3">
+            <div class="cs-lens-title">Viability</div>
+            <div class="cs-lens-sub">Does a sustainable business exist here — not just a product?</div>
+            <div class="cs-qa">
+              <div class="cs-q">What will customers pay for and how?</div>
+              <div class="cs-a">Pricing model was not locked at MVP stage — and that was deliberate. Early adopter conversations were scoped to validate signal and use case, not to close commercial terms. The SPAC thesis was built on market size and early adopter fit, not on contracted ARR. Pricing would follow once the value proposition was fully validated in use.</div>
+            </div>
+            <div class="cs-qa">
+              <div class="cs-q">How often will they use this — does the cadence support the model?</div>
+              <div class="cs-a">Ongoing — location performance intelligence is a continuous need, not a one-time project. Monthly P&L cycles, quarterly business reviews, annual location strategy decisions all create natural touchpoints. The cadence strongly supports a subscription model, though the specific pricing architecture was left open at this stage.</div>
+            </div>
+            <div class="cs-qa">
+              <div class="cs-q">Are you pricing for value or defaulting to the easiest model?</div>
+              <div class="cs-a">Not yet determined. The honest answer at MVP stage: the value is clear, the model is not. Outcome-based pricing tied to location profitability improvement would be the most defensible long-term — but it requires contractual structures that early-stage enterprise sales rarely accommodate. This was the right question to leave open rather than force a premature answer.</div>
+            </div>
+            <div class="cs-qa">
+              <div class="cs-q">Do the unit economics work?</div>
+              <div class="cs-a">Unknown at this stage — too early to model accurately. The SPAC was predicated on market opportunity and technology company positioning, not on proven unit economics. That's appropriate for this stage: validate the signal, prove the use case, then build the commercial model around what you learn from early adopters.</div>
+            </div>
+            <div class="cs-qa">
+              <div class="cs-q">Who are the first paying customers and what's the path?</div>
+              <div class="cs-a">Golf franchise operators and amusement park chains — same business DNA as Bowlero. Sub-5% margins, location-dependent revenue, labor-intensive operations, discretionary spending exposure. Early adopter conversations confirmed the signal translated outside bowling. That cross-vertical validation was critical for the SPAC narrative.</div>
+            </div>
+          </div>
+
+          <!-- DEFENSIBILITY -->
+          <div class="cs-lens-panel" id="csl4">
+            <div class="cs-lens-title">Defensibility</div>
+            <div class="cs-lens-sub">What makes this hard to copy — and how long does that last?</div>
+            <div class="cs-qa">
+              <div class="cs-q">Where does the uniqueness live?</div>
+              <div class="cs-a">Process discipline — specifically the discovery methodology used to identify what to build and which signals actually predict profitability. Not the algorithm itself (that can be replicated) but the systematic approach to surfacing the right capability from inside a complex enterprise and productizing it with startup-grade rigor. That method became Launch's standard practice because it was genuinely hard to do and easy to underestimate.</div>
+            </div>
+            <div class="cs-qa">
+              <div class="cs-q">What does it cost a customer to walk away after a year?</div>
+              <div class="cs-a">High. After 12 months, a customer's full location history, benchmarking comparisons, and predictive baselines all live inside the platform. Switching means rebuilding that context from scratch — and losing the peer benchmarking network that only has value because others are in it. The switching cost is designed in, not hoped for.</div>
+            </div>
+            <div class="cs-qa">
+              <div class="cs-q">Does value compound with more customers?</div>
+              <div class="cs-a">Partially. More location data improves the predictive model — a customer joining in year three gets a smarter product than the early adopter did. But it's not a true network effect where each customer directly makes the experience better for others. It's a data flywheel: more data, better predictions, stronger moat over time. Defensibility grows with scale, just not exponentially.</div>
+            </div>
+            <div class="cs-qa">
+              <div class="cs-q">Is the experience functional or emotionally engaging?</div>
+              <div class="cs-a">Identity. The emotional job isn't "see better data" — it's "be the kind of operator who makes decisions with evidence instead of gut." For Bowlero, it was even more specific: being seen as a technology company, not just an entertainment business. That identity shift is what justified the SPAC premium. The product was the proof. The identity was the purchase.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 </body>
 </html>
