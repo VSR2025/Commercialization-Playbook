@@ -7,22 +7,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #0e0e0e;
-    --surface: #161616;
-    --surface2: #1e1e1e;
-    --border: #2a2a2a;
-    --text: #e8e4dc;
-    --muted: #8a8480;
-    --accent: #c9a84c;
-    --accent-dim: rgba(201, 168, 76, 0.12);
-    --go: #4a9e74;
-    --go-dim: rgba(74, 158, 116, 0.1);
-    --pause: #c9a84c;
-    --pause-dim: rgba(201, 168, 76, 0.1);
-    --nogo: #c95f4a;
-    --nogo-dim: rgba(201, 95, 74, 0.1);
-    --new: #7b8fd4;
-    --new-dim: rgba(123, 143, 212, 0.1);
+    --bg: #f7f4ef;
+    --surface: #efecea;
+    --surface2: #e8e4e0;
+    --border: #d0cbc4;
+    --text: #1e1a16;
+    --muted: #7a7068;
+    --accent: #b8882a;
+    --accent-dim: rgba(184, 136, 42, 0.10);
+    --go: #2d7a55;
+    --go-dim: rgba(45, 122, 85, 0.10);
+    --pause: #a07820;
+    --pause-dim: rgba(160, 120, 32, 0.10);
+    --nogo: #b03a28;
+    --nogo-dim: rgba(176, 58, 40, 0.10);
+    --new: #4a5eaa;
+    --new-dim: rgba(74, 94, 170, 0.10);
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -57,12 +57,12 @@
     right: -200px;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(184,136,42,0.07) 0%, transparent 70%);
     pointer-events: none;
   }
 
   .hero-eyebrow {
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 500;
     letter-spacing: 0.25em;
     text-transform: uppercase;
@@ -103,7 +103,7 @@
     max-width: 560px;
     font-size: 16px;
     line-height: 1.85;
-    color: #a8a29a;
+    color: #5c5550;
     margin-bottom: 64px;
     opacity: 0;
     animation: fadeUp 0.8s ease forwards 0.8s;
@@ -140,11 +140,11 @@
 
   .btn-primary {
     background: var(--accent);
-    color: #0e0e0e;
+    color: #ffffff;
   }
 
   .btn-primary:hover {
-    background: #d4b460;
+    background: #c49838;
     transform: translateY(-1px);
   }
 
@@ -173,7 +173,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    font-size: 11px;
+    font-size: 12px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--muted);
@@ -192,27 +192,67 @@
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1.6fr 1fr;
     margin: 0 60px;
   }
 
   .stat {
-    padding: 32px 40px;
-    border-right: 1px solid var(--border);
+    padding: 36px 40px;
   }
 
-  .stat:last-child { border-right: none; }
+  .stat-tagline {
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+  }
 
-  .stat-number {
+  .stat-headline {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 42px;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--text);
+  }
+
+  .stat-headline-accent {
+    color: var(--accent);
+    font-style: italic;
+  }
+
+  .stat-instruction {
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.6;
+    max-width: 420px;
+  }
+
+  .stat-meta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 18px;
+    padding-left: 48px;
+  }
+
+  .stat-meta-item {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .stat-meta-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
     font-weight: 300;
     color: var(--accent);
     line-height: 1;
-    margin-bottom: 6px;
+    min-width: 48px;
   }
 
-  .stat-label {
+  .stat-meta-label {
     font-size: 12px;
     color: var(--muted);
     letter-spacing: 0.08em;
@@ -243,7 +283,7 @@
   .section-title-group {}
 
   .section-eyebrow {
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 500;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -302,7 +342,7 @@
   .gate-title-group {}
 
   .gate-part {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 500;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -344,7 +384,7 @@
   }
 
   .questions-group-label {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 500;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -375,7 +415,7 @@
     margin-top: 1px;
   }
 
-  .q-text { color: #c8c2ba; }
+  .q-text { color: #2e2a26; }
 
   .q-badge {
     display: inline-block;
@@ -408,7 +448,7 @@
     display: flex;
     gap: 10px;
     font-size: 13px;
-    color: #9a948c;
+    color: #5c5550;
     line-height: 1.6;
     margin-bottom: 8px;
   }
@@ -433,7 +473,7 @@
   }
 
   .spectrum-title {
-    font-size: 10px;
+    font-size: 12px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--muted);
@@ -446,7 +486,7 @@
     gap: 12px;
     margin-bottom: 8px;
     font-size: 12.5px;
-    color: #9a948c;
+    color: #5c5550;
   }
 
   .spectrum-bar {
@@ -537,7 +577,7 @@
   .teaser-text {}
 
   .teaser-eyebrow {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 500;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -622,7 +662,7 @@
   }
 
   .lens-map-desc {
-    font-size: 11px;
+    font-size: 12px;
     color: var(--muted);
     line-height: 1.4;
   }
@@ -654,7 +694,7 @@
   }
 
   .lens-eyebrow {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 500;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -696,11 +736,11 @@
     border: none;
     transition: all 0.2s ease;
     background: var(--accent);
-    color: #0e0e0e;
+    color: #ffffff;
   }
 
   .lens-nav-btn:hover {
-    background: #d4b460;
+    background: #c49838;
   }
 
   .lens-nav-back {
@@ -761,7 +801,7 @@
     border-radius: 50%;
     border: 1px solid var(--muted);
     color: var(--muted);
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 500;
     cursor: pointer;
     flex-shrink: 0;
@@ -779,7 +819,7 @@
 
   .fq-sub {
     font-size: 14px;
-    color: #b0aaa2;
+    color: #5c5550;
     line-height: 1.75;
     margin-bottom: 14px;
     display: none;
@@ -814,7 +854,7 @@
   }
 
   .fq-input::placeholder {
-    color: #5a5650;
+    color: #3a3630;
     font-style: italic;
   }
 
@@ -870,7 +910,7 @@
   }
 
   .spectrum-opt-signal {
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 500;
     padding: 3px 10px;
     flex-shrink: 0;
@@ -897,7 +937,7 @@
 
   .cq-text {
     font-size: 16px;
-    color: #d0cac2;
+    color: #4a4540;
     line-height: 1.65;
     margin-bottom: 14px;
   }
@@ -964,6 +1004,8 @@
   @media (max-width: 768px) {
     .hero { padding: 60px 24px; }
     .stats-bar { margin: 0 24px; grid-template-columns: 1fr; }
+    .stat-tagline { border-right: none; border-bottom: 1px solid var(--border); }
+    .stat-meta { padding-left: 0; flex-direction: row; flex-wrap: wrap; gap: 24px; }
     .stat { border-right: none; border-bottom: 1px solid var(--border); padding: 24px; }
     .framework { padding: 60px 24px; }
     .gate-header { padding: 20px 24px; }
@@ -1001,17 +1043,15 @@
 
 <!-- STATS BAR -->
 <div class="stats-bar">
-  <div class="stat">
-    <div class="stat-number">3</div>
-    <div class="stat-label">Decision Gates</div>
+  <div class="stat stat-tagline">
+    <div class="stat-headline">You built it.</div>
+    <div class="stat-headline stat-headline-accent">We'll tell you if it's worth selling.</div>
+    <div class="stat-instruction">Answer 12 questions across 3 gates. Get a clear Go, Pause, or No-go verdict.</div>
   </div>
-  <div class="stat">
-    <div class="stat-number">2</div>
-    <div class="stat-label">Real Outcomes — Go & No-go</div>
-  </div>
-  <div class="stat">
-    <div class="stat-number">1</div>
-    <div class="stat-label">Discipline that doesn't expire</div>
+  <div class="stat stat-meta">
+    <div class="stat-meta-item"><span class="stat-meta-num">3</span><span class="stat-meta-label">Decision Gates</span></div>
+    <div class="stat-meta-item"><span class="stat-meta-num">~20</span><span class="stat-meta-label">Minutes to complete</span></div>
+    <div class="stat-meta-item"><span class="stat-meta-num">1</span><span class="stat-meta-label">Clear verdict at the end</span></div>
   </div>
 </div>
 
@@ -1620,11 +1660,6 @@
     }
 
     verdictEl.innerHTML = html;
-  }
-
-  function toggleGate(id) {
-    const gate = document.getElementById(id);
-    gate.classList.toggle('open');
   }
 
   const cqAnswers = {};
